@@ -1,0 +1,176 @@
+$gris-fuerte: #48545c;
+$gris-flojo: #727d85;
+
+#noticia {
+	background: #fff;
+	border-radius: 20px;
+	padding: 28px 35px;
+	width: 750px;
+	box-sizing: border-box;
+
+	h2 {
+		font-size: 18px;
+		margin: 20px 0;
+		color: $gris-fuerte;
+	}
+
+	#autor {
+		font-size: 14px;
+		display: flex;
+
+		img {
+			border-radius: 50%;
+			width: 37px;
+			grid-area: i;
+			margin-right: 10px;
+		}
+
+		.imagen {
+			display: grid;
+			grid-template-areas:
+				"i t"
+				"i a";
+			grid-gap: 5px;
+
+			h4 {
+				grid-area: t;
+				color: $gris-fuerte;
+			}
+			p {
+				grid-area: a;
+				color: $gris-flojo;
+			}
+		}
+	}
+
+	#content {
+		margin-top: 24px;
+
+		h1 {
+			font-size: 28px;
+			margin-bottom: 10px;
+			color: $gris-fuerte;
+		}
+		.ic {
+			border-radius: 50%;
+			font-size: 16px;
+			padding: 5px;
+			margin-right: 5px;
+		}
+		.like {
+			background: #19b5bc;
+			color: #fff;
+		}
+		.money {
+			color: #acb5bc;
+		}
+		> span {
+			margin-right: 10px;
+		}
+		#galeria {
+			margin-top: 32px;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 20px;
+
+			img {
+				border-radius: 5px;
+			}
+		}
+
+		#doctor {
+			font-size: 14px;
+			display: flex;
+			margin-bottom: 10px;
+
+			img {
+				grid-area: i;
+				margin-right: 10px;
+				border-radius: 5px;
+			}
+
+			.imagen {
+				display: grid;
+				grid-template-areas:
+					"i t"
+					"i a";
+				grid-gap: 5px;
+
+				h4 {
+					grid-area: t;
+					color: $gris-fuerte;
+				}
+				p {
+					grid-area: a;
+					color: $gris-flojo;
+				}
+			}
+		}
+		#contacta {
+			padding: 8px 15px;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		.btn {
+			background: #19b5bc;
+			color: #fff;
+			border-radius: 23px;
+		}
+
+		#valoracion {
+			.star {
+				color: #ffbb4b;
+			}
+			.star:first-child {
+				margin-left: 10px;
+			}
+			p {
+				margin-bottom: 20px;
+			}
+		}
+
+		#formulario {
+		}
+	}
+}
+
+@media (max-width: 1165px) {
+	#noticia {
+		width: 690px;
+		padding: 15px;
+
+		#content {
+			#galeria {
+				grid-gap: 15px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 850px) {
+	#noticia {
+		width: 100%;
+		border-radius: 0;
+		padding: 0;
+		#content {
+			#galeria {
+				grid-gap: 10px;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	#noticia {
+		#content {
+			#galeria {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
+}

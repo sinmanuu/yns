@@ -1,0 +1,49 @@
+.error {
+  color: red;
+}
+
+label {
+  display: block;
+}
+
+select,
+input[type="text"],
+textarea {
+  border: 2px solid #e1e8eb;
+  width: 413px;
+  padding: 10px 16px;
+  margin: 10px 0;
+  color: #acb5bc;
+}
+
+p.recomendacion {
+  display: inline-block;
+  padding: 15px;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 50% !important;
+  width: 30px;
+  text-align: center;
+  border: 2px solid #e1e8eb;
+}
+
+p.recomendacion.active {
+  background: #19b5bc;
+  color: #fff;
+}
+
+.btn-submit {
+  display: block;
+  border: none;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+@media (max-width: 500px) {
+  select,
+  input[type="text"],
+  textarea {
+    width: -webkit-fill-available;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
